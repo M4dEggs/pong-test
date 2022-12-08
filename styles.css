@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgba(103, 103, 103, 0.819);
+    font-family: monospace;
+}
+
+
+.screen {
+    position: relative;
+    
+    margin:auto;
+    margin-top: 10%;
+
+    width: 50%;
+    aspect-ratio: 2;
+
+    background-color: rgba(0, 0, 0, 0.808);
+    border: 5px solid black;
+    border-radius: 4px;
+    overflow: hidden;
+    
+}
+
+.player {
+    position: absolute;
+    margin-left:1%;
+    top: 10px;
+
+    width: 20px;
+    height: 80px;
+
+    background-color: rgb(15, 69, 193);
+    border-radius: 50px;
+    box-shadow: 0 0 20px blue;
+}
+
+.border {
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    
+    width: 5px;
+    height: 490px;
+
+    background-color: black;
+}
+
+.player2 {
+    position: relative;
+    left: 96%;
+    top: 100px;
+
+    width: 20px;
+    height: 80px;
+
+    background-color: rgb(193, 15, 15);
+    border-radius: 50px;
+    box-shadow: 0 0 20px red;
+}
+
+.ball {
+    position: absolute;
+    left: 40px;
+    top: 150px;
+
+    width: 20px;
+    height: 20px;
+
+    background-color: rgb(166, 61, 37);
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px  rgb(255, 0, 0);
+
+
+}
+
+.up-btn {
+    position: absolute;
+    top: 0%;
+    left: 0px;
+    z-index: 2222;
+
+    width: 50%;
+    height: 50%;
+
+    opacity: 0;
+    background-color: rgba(24, 48, 10, 0.774) ;
+    border: 0;
+
+    font-size: 40px;
+    color: aliceblue;
+    font-family: monospace;
+
+}
+
+.down-btn {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    z-index: 2222;
+
+    width: 50%;
+    height: 50%;
+
+    opacity: 0;
+    background-color: rgba(24, 48, 10, 0.774) ;
+    border: 0;
+
+    font-size: 40px;
+    color: aliceblue;
+    font-family: monospace;
+}
+
+.player-score{
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    z-index: 1111;
+
+    opacity: 0.1;
+    font-size: 200px;
+    color: rgb(255, 255, 255);
+    font-family: sans-serif;
+}
+
+.enemy-score{
+    position: absolute;
+    top: 10%;
+    left: 65%;
+    z-index: 1111;
+
+
+    opacity: 0.1;
+    font-size: 200px;
+    color: rgb(255, 255, 255);
+    font-family: sans-serif;
+}
+
+
+@media screen and (max-width:1000px) {
+    .screen {
+        
+        margin: auto;
+        margin-top: 15%;
+        
+    
+        width: 80%;
+        aspect-ratio: 2;
+    
+        background-color: rgba(0, 0, 0, 0.808);
+        border: 5px solid black;
+        border-radius: 4px;
+    }
+    
+}
+
+@media screen and (max-width:500px) {
+    .enemy-score{
+        font-size: 75px;
+
+    }
+    .player-score{
+        font-size: 75px;
+    }
+    
+    
+}

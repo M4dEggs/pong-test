@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>random</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="screen" id="screen">
+      <div class="player" id="p1"></div>
+      <div class="player2" id="p2"></div>
+      <div class="border"></div>
+      <div class="ball" id="b1"></div>
+      <button class="up-btn" onmousedown="p1_Up()" onmouseup="reset()">
+        UP
+      </button>
+      <button class="down-btn" onmousedown="p1_Down()" onmouseup="reset()">
+        DOWN
+      </button>
+      <p class="player-score" id="p_score">0</p>
+      <p class="enemy-score" id="e_score">0</p>
+    </div>
+
+    <button class="reset-btn" onclick="reset()">Reset</button>
+    <button class="start-btn" onclick="start()">Start</button>
+    <button class="ball-reset" id="ball-reset" onclick="ball_reset()">
+      Ball-reset
+    </button>
+    <script src="app.js"></script>
+  </body>
+</html>
