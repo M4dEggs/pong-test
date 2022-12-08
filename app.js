@@ -54,7 +54,6 @@ function ball_and_p2_colide() {
   ) {
     ball_side = false;
     ball_touches++;
-    console.log(ball_touches);
   } else if (
     b.x < p1.x + p1.width &&
     b.x + b.width > p1.x &&
@@ -63,7 +62,6 @@ function ball_and_p2_colide() {
   ) {
     ball_side = true;
     ball_touches++;
-    console.log(ball_touches);
   }
 }
 
@@ -93,8 +91,9 @@ function ball_vertical_movement() {
 
 function ball_move_up() {
   var ball_x = ball.offsetTop;
+  var ball_speed = 0.08 * ball_touches;
   if (ball_x > 0) {
-    ball.style.top = ball_x - 4 + "px";
+    ball.style.top = ball_x - ball_speed - 4 + "px";
   } else {
     vertical_turn = 1;
   }
@@ -102,9 +101,10 @@ function ball_move_up() {
 
 function ball_move_down() {
   var ball_x = ball.offsetTop;
+  var ball_speed = 0.08 * ball_touches;
   var screen_height = parseInt(screen_1.height);
   if (ball_x < screen_height - 21) {
-    ball.style.top = ball_x + 4 + "px";
+    ball.style.top = ball_x + ball_speed + 4 + "px";
   } else {
     vertical_turn = 0;
   }
@@ -114,11 +114,13 @@ function ball_move_down() {
 function game_start() {
   var ball_left = ball.offsetLeft;
   var ball_speed = 0.2 * ball_touches;
+  var ball_move_left = ball_left - ball_speed - 5;
+  var ball_move_right = ball_left + ball_speed + 5;
 
   if (ball_side == true) {
-    ball.style.left = ball_left + 5 + ball_speed + "px";
+    ball.style.left = ball_move_right + "px";
   } else if (ball_side == false) {
-    ball.style.left = ball_left - 5 + ball_speed + "px";
+    ball.style.left = ball_move_left + "px";
   }
 }
 
