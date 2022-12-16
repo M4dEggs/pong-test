@@ -3,6 +3,8 @@ const player_2 = document.getElementById("p2");
 const ball = document.getElementById("b1");
 const screen = document.getElementById("screen");
 const ball_reset_btn = document.getElementById("ball-reset");
+const down_btn = document.getElementById("down-btn");
+const up_btn = document.getElementById("up-btn");
 
 const screen_1 = getComputedStyle(screen);
 
@@ -171,6 +173,22 @@ function start() {
 
   game_time = setTimeout("start()", 10);
 }
+
+down_btn.addEventListener("touchstart", (e) => {
+  p1_Down();
+});
+
+up_btn.addEventListener("touchstart", (e) => {
+  p1_Up();
+});
+
+down_btn.addEventListener("touchend", (e) => {
+  reset();
+});
+
+up_btn.addEventListener("touchend", (e) => {
+  reset();
+});
 
 function ball_reset() {
   clearTimeout(game_time);
