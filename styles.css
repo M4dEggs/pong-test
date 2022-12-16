@@ -107,12 +107,17 @@ body{
     height: 50%;
 
     opacity: 0;
-    background-color: rgba(24, 48, 10, 0.774) ;
+    background-color: rgba(184, 211, 169, 0.774) ;
     border: 0;
 
     font-size: 40px;
     color: aliceblue;
     font-family: monospace;
+}
+
+.dwn-btn {
+    position: absolute;
+    top: 0%;
 }
 
 .player-score{
